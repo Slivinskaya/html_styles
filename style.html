@@ -4,6 +4,7 @@
     <div class="All_Centering-Born"> Дата рождения: 01.01.2002</div>
     <div class="All_Centering-university"> Студентка Омского государственного университета им. Ф.М.Достоевского</div>
     <div class="All_Centering-group" onmouseenter="hover_user()"> <p>Группа: МБС-901</p></div>
+    <input onchange="change_user(event)"/>
 </div>
 
 <style>
@@ -71,10 +72,16 @@
     function click_user(){
         alert("Hello!!!")
     }
+
     function hover_user(event){
         console.log("Group", event)
     }
+
     function leave_user(event){
         console.log("Left the area", event)
+    }
+
+    function change_user(event){
+        console.log("Change:", event)
     }
 </script>
