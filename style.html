@@ -1,6 +1,6 @@
 <div class="All_Centering">
-    <img class="All_Centering-photo" src="I.jpg" alt="Моя фотография">
-    <div class="All_Centering-FullName"> Сливинская Алёна Сергеевна</div>
+    <img class="All_Centering-photo" onclick="click_Handler()" src="I.jpg" alt="Моя фотография">
+    <div class="All_Centering-Full_Name"> Сливинская Алёна Сергеевна</div>
     <div class="All_Centering-Born"> Дата рождения: 01.01.2002</div>
     <div class="All_Centering-university"> Студентка Омского государственного университета им. Ф.М.Достоевского</div>
     <div class="All_Centering-group"> <p>Группа: МБС-901</p></div>
@@ -21,7 +21,7 @@
 </style>
 
 <style>
-    .All_Centering-FullName {
+    .All_Centering-Full_Name {
         font-size: 45px;
         font-weight: 450;
         font-family: Georgia;
@@ -66,3 +66,11 @@
     0 0 151px rgb(23, 7, 252);
     }
 </style>
+
+<script>
+    function click_Handler(){
+        alert("Hello!!!")
+    }
+
+
+</script>
