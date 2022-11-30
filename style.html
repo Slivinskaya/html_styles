@@ -2,7 +2,7 @@
     <img class="All_Centering-photo" onclick="click_user()" src="I.jpg" alt="Моя фотография">
     <div class="All_Centering-Full_Name" onmouseout="leave_user()"> Сливинская Алёна Сергеевна</div>
     <div class="All_Centering-Born"> Дата рождения: 01.01.2002</div>
-    <div class="All_Centering-university"> Студентка Омского государственного университета им. Ф.М.Достоевского</div>
+    <div id="student" > Студентка Омского государственного университета им. Ф.М.Достоевского</div>
     <div class="All_Centering-group" onmouseenter="hover_user()"> <p>Группа: МБС-901</p></div>
     <input onchange="change_user(event)"/>
 </div>
@@ -44,10 +44,40 @@
 </style>
 
 <style>
-    .All_Centering-university {
-        font-size: 30px;
+    .color1 {
+      background-color: red;
+      font-size: 30px;
         font-style: italic;
-        color: rgb(125, 100, 37);
+        color: black;
+        padding: 5px;
+    }
+    .color2 {
+      background-color: green;
+      font-size: 30px;
+        font-style: italic;
+        color: black;
+        padding: 5px;
+    }
+    .color3 {
+      background-color: blue;
+      font-size: 30px;
+        font-style: italic;
+        color: black;
+        padding: 5px;
+    }
+    .color4 {
+      background-color: yellow;
+      font-size: 30px;
+        font-style: italic;
+        color: black;
+        padding: 5px;
+    }
+    .color5 {
+      background-color: fuchsia;
+      font-size: 30px;
+        font-style: italic;
+        color: black;
+        padding: 5px;
     }
 </style>
 
@@ -87,4 +117,15 @@
         element.innerHTML = event.target.value ;
         alert("Change: " + event.target.value)
     }
+
+    (function changeColor(currentNumber){
+      currentNumber++;
+      if(currentNumber >5){
+        currentNumber = 1;
+      }
+      document.getElementById('student').setAttribute('class', 'color' + currentNumber);
+      setTimeout(function(){
+        changeColor(currentNumber)
+      }, 1000);
+    })(0);
 </script>
