@@ -82,6 +82,9 @@
     }
 
     function change_user(event){
-        console.log("Change:", event)
+        console.log("event", event.target.value);
+        let element = document.getElementsByName("click_user");
+        element.innerHTML = event.target.value ;
+        alert("Change: " + event.target.value)
     }
 </script>
